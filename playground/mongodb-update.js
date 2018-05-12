@@ -11,15 +11,30 @@ MongoClient.connect(url,(error,client) => {
 
     const db = client.db('Todoapp');
 
-    db.collection('Todos').findOneAndUpdate({
-        _id: new ObjectId('5af44327ccf01c26681fb6f1')   
+    // db.collection('Todos').findOneAndUpdate({
+    //     _id: new ObjectId('5af44327ccf01c26681fb6f1')   
+    // },{
+    //     $set : {
+    //         completed: false
+    //     }
+    // },{
+    //     returnOriginal:false
+    // }).then((result) => {
+    //     console.log(result);
+    // });
+
+    db.collection('Users').findOneAndUpdate({
+        _id: new ObjectId('5af573cf0b28a62fa8d6fb5e')
     },{
         $set : {
-            completed: false
+            name:'Akanchha Jaiswal'
+        },
+        $inc: {
+            age: 1
         }
     },{
         returnOriginal:false
     }).then((result) => {
         console.log(result);
-    });
+    })
 })
