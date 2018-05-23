@@ -4,18 +4,19 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start":"node server/server.js",
+    "start": "node server/server.js",
     "test": "SET \"NODE_ENV = test \" && mocha server/**/*.test.js --timeout 5000",
-    "test-watch":"nodemon --exec \"npm test\""
+    "test-watch": "nodemon --exec \"npm test\""
   },
   "engines": {
-    "node":"6.11.3"
+    "node": "6.11.3"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
+    "lodash": "^4.17.10",
     "mongodb": "^3.0.8",
     "mongoose": "^5.1.0"
   },
